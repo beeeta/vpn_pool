@@ -32,15 +32,15 @@ class Vpn(Base):
     trspeed = Column(FLOAT)
 
     def __repr__(self):
-        auto_repr(self)
+        return auto_repr(self)
 
 engine = create_engine('mysql+pymysql://root:123456@localhost:3307/vpns?charset=utf8mb4',pool_recycle=3600)
 # Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
-# vpn = Vpn('ip110',404,'http','very','china','gd','sz',58.3,26.3,58)
-# session.add(vpn)
-# session.commit()
+vpn = Vpn(None,404,'http','very','china','gd','sz',None,26.3,58)
+session.add(vpn)
+session.commit()
 
 
 def auto_repr(obj):

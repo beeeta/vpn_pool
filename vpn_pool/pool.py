@@ -5,6 +5,7 @@ import logging
 import when
 from .tools import decode_ip_ref as dif
 from . import Vpn,session
+import re
 
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(levelname)s %(message)s',filename='myapp.log')
 log = logging.getLogger(__name__)
@@ -43,7 +44,10 @@ def _str2tds(tds):
     if len(tds)<10 :
         log.error('tr width small than 10')
         return None
-    ip = pq(dif(pq(tds[0])('a').text())).text()
+    row_txt = pq(tds[0]).text()
+    # cpl = re.compile()
+    res = re.search(r'"(.*)"',row_txt,)
+    ip = pq(dif(res.group().strip("\""))).text()
     port = pq(tds[1]).text()
     protocol = pq(tds[2]).text()
     anony = pq(tds[3]).text()
@@ -51,29 +55,33 @@ def _str2tds(tds):
     region = pq(tds[5]).text()
     city = pq(tds[6]).text()
     available = pq(tds[7]).text().strip('%')
-    respeed = pq(tds[8]).find('span.bar').css('width')
-    trspeed = pq(tds[9]).find('span.bar').css('width')
+    respeed_style = pq(tds[8]).find('span.bar').attr('style')
+    respeed = re.search(r"(?<=(width:))(\d{0,3})(?=(%))",respeed_style)
+    trspeed_style = pq(tds[9]).find('span.bar').attr('style')
+    trspeed = re.search(r"(?<=(width:))(\d{0,3})(?=(%))",trspeed_style)
     return Vpn(ip,port,protocol,anony,country,region,city,available,respeed,trspeed)
-
 
 def parse_ct2entity(content):
     trs = pq(content).find('table.DataGrid tr')
     entities = []
     for tr in trs[1:]:
         tds = pq(tr).find('td')
-        entities.append(_str2tds(tds))
+        entity = _str2tds(tds)
+        entities.append(entity)
     return entities
 
 def parse_ct2option(content):
     options = pq(content)('select[name="c"]').find('option')
     country_index = [(pq(i).val(),pq(i).text()) for i in options if pq(i).val() is not '']
+    print(country_index)
     return country_index
 
 def run_pool():
     ctt = req_content(URL,'CN')
     #获得所有国家名字-简称
     ctry_kv = parse_ct2option(ctt)
-    log.debug(ctry_kv)
     #获取不同国家的vpn信息
     entites = parse_ct2entity(ctt)
-    log.debug(entites)
+    session.add(entites[0])
+    session.commit()
+    # log.debug(repr(entites))
