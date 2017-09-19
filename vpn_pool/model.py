@@ -1,6 +1,7 @@
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import Column,Integer,String,FLOAT,create_engine
+from sqlalchemy import create_engine,Column,Integer,String,Float,DateTime
+import datetime
 
 
 Base = declarative_base()
@@ -27,9 +28,10 @@ class Vpn(Base):
     country = Column(String(20))
     region = Column(String(30))
     city = Column(String(30))
-    available = Column(FLOAT)
-    respeed = Column(FLOAT)
-    trspeed = Column(FLOAT)
+    available = Column(Float)
+    respeed = Column(Float)
+    trspeed = Column(Float)
+    createTime = Column(DateTime,default=datetime.datetime.utcnow())
 
     def __repr__(self):
         return auto_repr(self)
@@ -38,10 +40,6 @@ engine = create_engine('mysql+pymysql://root:123456@localhost:3307/vpns?charset=
 # Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
-vpn = Vpn(None,404,'http','very','china','gd','sz',None,26.3,58)
-session.add(vpn)
-session.commit()
-
 
 def auto_repr(obj):
     try:

@@ -140,3 +140,60 @@
 2017-09-18 18:12:24,175 INFO today content file already exist, do not to request
 2017-09-18 18:12:27,659 ERROR tr width small than 10
 2017-09-18 18:12:27,851 ERROR tr width small than 10
+2017-09-19 08:34:42,307 INFO begin to request url
+2017-09-19 08:34:42,307 DEBUG Starting new HTTP connection (1): www.freeproxylists.net
+2017-09-19 08:34:43,602 DEBUG http://www.freeproxylists.net:80 "GET /zh/?c=CN&pt=&pr=&a%5B%5D=0&a%5B%5D=1&a%5B%5D=2&u=0 HTTP/1.1" 200 6864
+2017-09-19 08:34:46,176 ERROR tr width small than 10
+2017-09-19 08:34:48,890 ERROR tr width small than 10
+2017-09-19 08:46:55,763 INFO today content file already exist, do not to request
+2017-09-19 08:47:21,949 INFO today content file already exist, do not to request
+2017-09-19 08:48:06,932 INFO today content file already exist, do not to request
+2017-09-19 08:48:16,543 INFO today content file already exist, do not to request
+2017-09-19 08:48:18,369 ERROR tr width small than 10
+2017-09-19 08:48:21,088 ERROR tr width small than 10
+2017-09-19 08:50:25,382 INFO today content file already exist, do not to request
+2017-09-19 08:50:27,200 ERROR tr width small than 10
+2017-09-19 08:50:29,869 ERROR tr width small than 10
+2017-09-19 08:55:20,132 INFO today content file already exist, do not to request
+2017-09-19 08:55:21,972 ERROR tr width small than 10
+2017-09-19 08:55:21,972 DEBUG the tr index:10 is unformat
+2017-09-19 08:55:24,671 ERROR tr width small than 10
+2017-09-19 08:55:24,671 DEBUG the tr index:26 is unformat
+2017-09-19 09:54:40,416 INFO today content file already exist, do not to request
+2017-09-19 09:54:42,312 ERROR tr width small than 10
+2017-09-19 09:54:42,312 DEBUG the tr index:10 is unformat
+2017-09-19 09:54:45,041 ERROR tr width small than 10
+2017-09-19 09:54:45,041 DEBUG the tr index:26 is unformat
+2017-09-19 10:49:13,306 INFO begin to request url
+2017-09-19 10:49:13,309 DEBUG Starting new HTTP connection (1): www.freeproxylists.net
+2017-09-19 10:50:06,990 INFO begin to request url
+2017-09-19 10:50:06,994 DEBUG Starting new HTTP connection (1): 127.0.0.1
+2017-09-19 10:50:08,112 DEBUG http://127.0.0.1:4359 "GET http://www.freeproxylists.net/zh/?c=CN&page=1 HTTP/1.1" 200 591
+2017-09-19 10:51:58,778 INFO today content file already exist, do not to request
+2017-09-19 10:51:58,779 INFO begin to request url
+2017-09-19 10:51:58,783 DEBUG Starting new HTTP connection (1): 127.0.0.1
+2017-09-19 10:51:59,419 DEBUG http://127.0.0.1:4359 "GET http://www.freeproxylists.net/zh/?c=US&page=1 HTTP/1.1" 200 590
+2017-09-19 10:51:59,430 INFO today content file already exist, do not to request
+2017-09-19 10:58:14,094 INFO begin to request url
+2017-09-19 10:58:14,097 DEBUG Starting new HTTP connection (1): 127.0.0.1
+2017-09-19 10:58:15,588 DEBUG http://127.0.0.1:4359 "GET http://www.freeproxylists.net/zh/?c=CN&page=1 HTTP/1.1" 200 591
+2017-09-19 10:58:15,598 INFO begin to request url
+2017-09-19 10:58:15,601 DEBUG Starting new HTTP connection (1): 127.0.0.1
+2017-09-19 10:58:16,642 DEBUG http://127.0.0.1:4359 "GET http://www.freeproxylists.net/zh/?c=US&page=1 HTTP/1.1" 200 590
+2017-09-19 10:58:16,652 INFO today content file already exist, do not to request
+2017-09-19 11:00:10,621 INFO today content file already exist, do not to request
+2017-09-19 11:00:10,623 INFO today content file already exist, do not to request
+2017-09-19 11:00:10,624 INFO today content file already exist, do not to request
+2017-09-19 11:00:23,929 INFO begin to request url
+2017-09-19 11:00:23,932 DEBUG Starting new HTTP connection (1): www.freeproxylists.net
+2017-09-19 11:00:29,950 DEBUG http://www.freeproxylists.net:80 "GET /zh/?c=CN&page=1 HTTP/1.1" 200 591
+2017-09-19 11:00:29,954 INFO begin to request url
+2017-09-19 11:00:29,956 DEBUG Starting new HTTP connection (1): www.freeproxylists.net
+2017-09-19 11:00:31,978 DEBUG http://www.freeproxylists.net:80 "GET /zh/?c=US&page=1 HTTP/1.1" 200 590
+2017-09-19 11:00:31,985 INFO today content file already exist, do not to request
+2017-09-19 11:06:44,548 INFO today content file already exist, do not to request
+2017-09-19 11:06:44,548 INFO today content file already exist, do not to request
+2017-09-19 11:06:44,548 INFO today content file already exist, do not to request
+2017-09-19 11:07:09,125 INFO today content file already exist, do not to request
+2017-09-19 11:07:09,125 INFO today content file already exist, do not to request
+2017-09-19 11:07:09,125 INFO today content file already exist, do not to request
